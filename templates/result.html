@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+p.double {border-style: double;}
+</style>
+
+<div style="border:6px solid maroon; background:#ccc;">
+{% for netid in netids %}
+{{netid}}<br>
+{% endfor %}
+</div>
+<br>
+<h1><p style="font-size:17px">The following attendees did not have emails linked to Mississippi State University. Here is the info that could be gathered:</h1></p>
+
+<table style="border-collapse: collapse; width: 25%; height: 34px;" border="1">
+<tbody>
+<tr style="height: 17px;">
+<td style="width: 50%; height: 17px;"><u>Name</u></td>
+<td style="width: 50%; height: 17px;"><u>Email</u></td>
+</tr>
+{% for name, email in badpeople.items %}
+<tr style="height: 17px;">
+<td style="width: 50%; height: 17px;">{{name}}</td>
+<td style="width: 50%; height: 17px;">{{email}}</td>
+</tr>
+{% endfor%}
+</tbody>
+</table>
+{% endblock %}

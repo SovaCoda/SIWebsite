@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+.right {
+  position: absolute;
+  right: 300px;
+  width: 300px;
+  padding: 10px;
+}
+.left {
+  position: absolute;
+  left: 75px;
+  width: 200px;
+  padding: 10px;
+}
+</style>
+<div class="right">
+<form action="get_name" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <br>
+    <input type="submit" value="Convert">
+</form>
+</div>
+{% endblock %}
