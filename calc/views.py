@@ -6,6 +6,9 @@ from django.http import HttpResponse
 def home(request):
     return render(request, 'home.html',{'name': 'conner'})
 
+def about(request):
+    return render(request, 'about.html')
+    
 def add(request):
 
     val1 = int(request.POST['num1'])
