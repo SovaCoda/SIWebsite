@@ -2,26 +2,8 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 # Create your views here.
-
-def home(request):
-    return render(request, 'home.html',{'name': 'conner'})
-
 def about(request):
     return render(request, 'about.html')
-    
-def add(request):
-
-    val1 = int(request.POST['num1'])
-    val2 = int(request.POST['num2'])
-    res = val1 + val2
-
-
-    return render(request, "result.html", {'Result':res})
-
-from django.http import HttpResponseRedirect
-from django.shortcuts import render
-
-from .forms import NameForm
 
 def removeDuplicates(arr):
     out = [] 
