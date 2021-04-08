@@ -2,16 +2,45 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <title>bootstrap4</title>
 </head>
-<body>
-    <h1> YO </h1>
 
+<style>
+    h1{
+        font-size: 50px;
+    }
+    small{
+        font-size: 20px;
+    }
+    #grad1 {
+        background: rgb(181,45,57);
+        background: linear-gradient(180deg, rgba(181,45,57,1) 0%, rgba(121,9,9,1) 53%, rgba(92,10,10,1) 100%);
+    }
+</style>
+
+<body>
+    
+    <div class="row">
+        <div class="col-sm-12", style="background-color:maroon">
+                <div id ="grad1">
+                    <h1 style="color:white;">
+                        &nbsp&nbsp&nbsp&nbsp&nbsp SI Data Retrieval<small> A Tool By Conner Bell</small>
+                    </h1>
+                </div>
+        </div>
+    </div>
+
+    <div id="content", name="content", class="main">
+        {% block content %}
+        {% endblock %}
+    </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    
 </body>
 </html> 
